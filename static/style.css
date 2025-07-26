@@ -1,0 +1,226 @@
+/* === Animated Gradient Background === */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+
+    background: linear-gradient(to right, #e0f7fa, #fff1f8, #f0f4c3);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === Main Container === */
+.container {
+    max-width: 700px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 35px 45px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* === Headings === */
+h1 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+/* === Tagline === */
+.tagline {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 30px;
+    font-style: italic;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* === Start Button & Other Buttons === */
+.button, .container > button {
+    background-color: #28a745;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .container > button:hover {
+    background-color: #218838;
+}
+
+/* === Live Typing Stats === */
+.live-stats {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    background-color: #e3f2fd;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px dashed #90caf9;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* === Sample Text === */
+.sample-text {
+    background: #f0f8ff;
+    border-left: 5px solid #007bff;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    user-select: none;
+}
+
+/* === Typing Textarea === */
+textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* === Submit Button === */
+form button {
+    margin-top: 20px;
+    background-color: #007bff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* === Result List === */
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+ul li {
+    margin: 12px 0;
+}
+
+/* === Try Again Button === */
+a.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #0056b3;
+}
+
+/* === Footer === */
+.footer {
+    margin-top: 50px;
+    font-size: 0.95rem;
+    color: #555;
+    opacity: 0.8;
+}
+.footer p {
+    line-height: 1.6;
+}
+
+/* === Settings Button (Top Right) === */
+.settings-button {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background-color: #343a40;
+    color: white;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+}
+
+.settings-button:hover {
+    background-color: #495057;
+}
+
+/* === Settings Form Styles === */
+.setting-item {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.setting-item label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.setting-item input,
+.setting-item select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
