@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>⚙️ Settings</h1>
+
+        <form>
+            <div class="setting-item">
+                <label for="username">👤 Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+
+            <div class="setting-item">
+                <label for="password">🔐 Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+
+            <div class="setting-item">
+                <label for="theme">🌙 Theme</label>
+                <select id="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <label for="language">🌐 Language</label>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="bn">বাংলা</option>
+                </select>
+            </div>
+
+            <button type="submit">Save Settings</button>
+        </form>
+
+        <div class="footer">
+            <p>🚀 Created for <strong>MLH Data Hackfest</strong><br>
+            👨‍💻 by <strong>Shreejit Podder</strong></p>
+        </div>
+    </div>
+</body>
+</html>
