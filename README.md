@@ -1,149 +1,94 @@
-🖋 Typing Speed Test — MLH Data Hackfest 2025 Project
+# Typing Speed Test App
 
-A fast, minimal, and interactive typing speed test app built using Python and Flask. This project measures typing speed (WPM), word count, and accuracy — providing users instant performance feedback in a clean, beginner-friendly interface.
-
----
-
-## 🚀 Features
-
-- ⌨ Real-time typing test
-- ⏱ Timer, word counter & WPM calculator
-- 📊 Instant result page
-- ⚙ Settings page with login UI
-- 🎨 Clean, responsive UI
-- 🧠 Built with help from ChatGPT
-- 🖥 Compatible with desktop and mobile
+🚀 A minimal & beautiful typing speed test web app created for the **MLH Data Hackfest 2025**.  
+Track your **WPM (Words Per Minute)**, typing accuracy, and overall performance — all in real-time!
 
 ---
 
-## 💻 Tech Stack
+## 🌟 Features
 
-- *Backend:* Python (Flask)
-- *Frontend:* HTML, CSS, JavaScript
-- *Templating:* Jinja2
-- *Deployment-ready:* Yes (supports Procfile)
-- *License:* MIT
+- Clean and modern UI
+- Real-time speed and word counter
+- Accuracy calculation
+- Result summary page
+- Settings panel (basic)
+- Responsive layout (desktop/mobile)
+- Built-in timer
 
 ---
 
-## 🛠 Installation & Run Instructions
+## 🛠️ Built With
+
+- Python (Flask)
+- HTML5, CSS3, JavaScript
+- Jinja2 template engine
+- VS Code & PyCharm
+- ChatGPT (OpenAI) for planning and code support
+
+---
+
+## 🧠 How It Works
+
+1. Visit homepage → Click **Start Test**
+2. Type the paragraph shown within time
+3. See result: **Speed**, **Word Count**, **Accuracy**
+4. Navigate to settings (optional)
+
+---
+
+## 🎬 Demo Video
+
+📺 Watch here: [YouTube Demo](https://youtu.be/hcRe_J2hiOQ)
+
+---
+
+## 🧪 Try It Out
+
+> Currently, this app runs locally.  
+> To test it on your machine:
+
+### 🔧 Local Setup
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/typing-speed-test.git
+git clone https://github.com/ShreejitPodder/typing-speed-test.git
 cd typing-speed-test
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Run the app
 python app.py
+Open your browser and go to: http://127.0.0.1:5000/
 
-Then open your browser and go to:
-
-http://127.0.0.1:5000
-
-
----
-
-📁 Folder Structure
-
+📁 Project Structure
+cpp
+Copy code
 typing-speed-test/
-├── app.py
-├── templates/
-│   ├── index.html
-│   └── result.html
 ├── static/
 │   ├── style.css
 │   └── logo.png
-├── utils/
-│   ├── _init_.py
-│   └── (optional scripts)
+├── templates/
+│   ├── index.html
+│   └── result.html
+├── app.py
 ├── requirements.txt
-├── Procfile (if deploying)
+├── Procfile
+├── .gitignore
 └── README.md
+⚠️ Known Issues
+Accuracy percentage may slightly vary depending on typing edge cases
 
+Settings panel is basic (further customization in progress)
 
----
+👨‍💻 Created by
+Shreejit Podder
+for MLH Data Hackfest 2025
+Devpost Profile
 
-📸 Demo Preview
-
-🎥 A full demo video showcasing the app is included with the submission.
-
-App walkthrough
-
-Live typing
-
-Result screen
-
-Settings page
-
-End credits
-
-
-📂 Source code: GitHub Repository
-
-
----
-
-🤖 AI Usage Disclosure
-
-This project was created with the support of OpenAI's ChatGPT (GPT-4).
-AI assistance was used to:
-
-Plan and structure the project
-
-Write and review Python/Flask code
-
-Design UI (HTML/CSS) elements
-
-Write this README and guide demo preparation
-
-
-All code was reviewed, understood, and tested by the developer Shreejit Podder before submission.
-AI was used responsibly as a learning and productivity aid during development.
-
-
----
-
-👨‍💻 Author
-
-Built with 💙 by Shreejit Podder
-Submitted as part of MLH Data Hackfest 2025
-
-
----
+🤖 AI Contribution
+Some parts of this project — especially Flask backend logic, HTML templating, and design planning — were assisted using ChatGPT by OpenAI.
 
 📜 License
+This project is licensed under the MIT License — feel free to fork & build more!
 
-This project is licensed under the MIT License.
-
-MIT License
-
-Copyright (c) 2025 Shreejit Podder
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights 
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
-copies of the Software, and to permit persons to whom the Software is 
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in 
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
-IN THE SOFTWARE.
-
-
----
-
-📨 Contact
-
-Have suggestions or feedback?
-Open an issue or message me on GitHub!
+yaml
+Copy code
+MIT License © 2025 Shreejit Podder
+🔗 GitHub Repo
+https://podderinstitutebd.github.io/mlh-typing-metrics
