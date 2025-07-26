@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Typing Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a href="/settings" class="settings-button">⚙️ Settings</a>
+
+    <div class="container">
+        <h1>🎯 Typing Test Results</h1>
+
+        <ul>
+            <li>⏱️ Time Taken: <strong>{{ time }} seconds</strong></li>
+            <li>✍️ Words Typed: <strong>{{ word_count }}</strong></li>
+            <li>⚡ Speed (WPM): <strong>{{ wpm }}</strong></li>
+            <li>🎯 Accuracy: <strong>{{ accuracy }}%</strong></li>
+        </ul>
+
+        <a href="/typing" class="button">🔁 Try Again</a>
+
+        <div class="footer">
+            <p>🚀 Created for <strong>MLH Data Hackfest</strong><br>
+            👨‍💻 by <strong>Shreejit Podder</strong></p>
+        </div>
+    </div>
+</body>
+</html>
