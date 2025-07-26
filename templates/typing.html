@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        let started = false;
+        let startTime = 0;
+        let timerInterval;
+
+        function startTyping() {
+            if (!started) {
+                startTime = new Date().getTime();
+                document.getElementById("start_time_input").value = startTime / 1000;
+                started = true;
+                timerInterval = setInterval(updateLiveStats, 1000);
+            }
+        }
+
+        function updateLiveStats() {
+            const now = new Date().getTime();
+            const elapsedSeconds = Math.floor((now - startTime) / 1000);
+            document.getElementById("live-timer").textContent = elapsedSeconds + "s";
+
+            const typed = document.getElementById("typing-box").value.trim();
+            const wordCount = typed === "" ? 0 : typed.split(/\s+/).length;
+            document.getElementById("live-word").textContent = wordCount;
+
+            const minutes = elapsedSeconds / 60;
+            const wpm = minutes > 0 ? Math.round(wordCount / minutes) : 0;
+            document.getElementById("live-speed").textContent = wpm;
+        }
+    </script>
+</head>
+<body>
+    <a href="/settings" class="settings-button">⚙️ Settings</a>
+
+    <div class="container">
+        <h1>⌨️ Typing Test</h1>
+
+        <div class="live-stats">
+            ⏱️ Time: <span id="live-timer">0s</span> |
+            ✍️ Words: <span id="live-word">0</span> |
+            ⚡ Speed: <span id="live-speed">0</span> WPM
+        </div>
+
+        <div class="sample-text">{{ text }}</div>
+
+        <form method="POST" action="/result">
+            <textarea id="typing-box" name="typed_text" rows="6" cols="60" placeholder="Start typing here..." oninput="startTyping()" required></textarea>
+            <input type="hidden" name="start_time" id="start_time_input" value="">
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="footer">
+            <p>🚀 Created for <strong>MLH Data Hackfest</strong><br>
+            👨‍💻 by <strong>Shreejit Podder</strong></p>
+        </div>
+    </div>
+</body>
+</html>
